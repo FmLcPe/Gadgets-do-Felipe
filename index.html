@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Descubra Aqui! Encontre novidades, tendências e muito mais.">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>✨ Descubra Aqui! 🔍🛍️</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>Gadgets do Felipe</h1>
+        <ul class="menu">
+            <li><a href="redes.html">Redes Sociais</a></li>
+        </ul>
+    </nav>
+
+    <!-- Galeria de Quadros -->
+    <div class="galeria" id="galeria">
+        <!-- Os quadros serão adicionados aqui pelo JavaScript -->
+    </div>
+
+    <script>
+        // Lista de quadros (poderia vir de um banco de dados)
+        const quadros = [
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Quadro Moderno",
+                descricao: "Arte exclusiva para sua decoração.",
+                link: "https://seusite.com/comprar1"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Paisagem Relaxante",
+                descricao: "Deixe seu ambiente mais tranquilo.",
+                link: "https://seusite.com/comprar2"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Arte Abstrata",
+                descricao: "Um toque de criatividade na sua casa.",
+                link: "https://seusite.com/comprar3"
+            },
+            {
+                imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rfgd-m3j8huk3scra41.webp",
+                titulo: "Estilo Minimalista",
+                descricao: "Beleza na simplicidade.",
+                link: "https://seusite.com/comprar4"
+            }
+        ];
+
+        // Função para carregar os quadros na galeria
+        function carregarQuadros() {
+            const galeria = document.getElementById("galeria");
+            quadros.forEach(q => {
+                const quadroHTML = `
+                    <div class="quadro-container">
+                        <img class="quadro-img" src="${q.imagem}" alt="${q.titulo}">
+                        <div class="quadro-content">
+                            <div class="quadro-title">${q.titulo}</div>
+                            <div class="quadro-text">${q.descricao}</div>
+                            <a href="${q.link}" class="quadro-btn" target="_blank">Comprar Agora</a>
+                        </div>
+                    </div>
+                `;
+                galeria.innerHTML += quadroHTML;
+            });
+        }
+
+        // Chamar a função ao carregar a página
+        carregarQuadros();
+    </script>
+
+</body>
+</html>
